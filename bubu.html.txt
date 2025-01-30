@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Page for Niti</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ff3366;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.5em;
+            color: #f9c4d2;
+            font-style: italic;
+            margin-top: 10px;
+            animation: fadeIn 4s ease-in-out;
+        }
+        .falling-flowers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .flower {
+            position: absolute;
+            animation: fall 5s infinite;
+            pointer-events: none;
+        }
+        @keyframes fall {
+            0% { top: -50px; opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="hindi-romantic-song.mp3" type="audio/mp3">
+    </audio>
+    
+    <div class="content">
+        <h1>Love you Bbu <span style="font-size: 2em;">❤️</span></h1>
+        <p>Niti</p>
+    </div>
+    
+    <div class="falling-flowers">
+        <!-- You can dynamically create flowers via JS, or manually add flower images here -->
+        <div class="flower" style="left: 10%; animation-duration: 5s; animation-delay: 0s;">
+            <img src="flower.png" alt="flower" width="30">
+        </div>
+        <div class="flower" style="left: 30%; animation-duration: 5s; animation-delay: 1s;">
+            <img src="flower.png" alt="flower" width="30">
+        </div>
+        <div class="flower" style="left: 50%; animation-duration: 5s; animation-delay: 2s;">
+            <img src="flower.png" alt="flower" width="30">
+        </div>
+        <div class="flower" style="left: 70%; animation-duration: 5s; animation-delay: 3s;">
+            <img src="flower.png" alt="flower" width="30">
+        </div>
+        <div class="flower" style="left: 90%; animation-duration: 5s; animation-delay: 4s;">
+            <img src="flower.png" alt="flower" width="30">
+        </div>
+    </div>
+
+    <script>
+        // You can use JavaScript to dynamically create more flowers if needed
+        setTimeout(() => {
+            document.body.style.animationPlayState = 'running';
+        }, 2000); // Start the animation after 2 seconds
+    </script>
+</body>
+</html>
